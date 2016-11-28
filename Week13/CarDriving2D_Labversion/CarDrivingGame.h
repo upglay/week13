@@ -104,11 +104,11 @@ public:
 			glm::vec3 ref_nor = glm::normalize(my_car.car_body.center_ - col_line_center);
 			const glm::vec3 dp = ref_nor * 0.001f;
 
-			/*
+			
 			my_car.car_body.center_ += dp;
-			my_car.car_body.model_matrix_ = ...;
-			my_car.vel_ = ...; // make your car stop (0 velocity)
-			*/
+			my_car.car_body.model_matrix_ = glm::translate(dp) * my_car.car_body.model_matrix_;
+			my_car.vel_ = glm::vec3(0.0f, 0.0f, 0.0f); // make your car stop (0 velocity)
+			
 
 			//car_body.center_ += vel_; //TODO: update model_matrix AND center?
 
