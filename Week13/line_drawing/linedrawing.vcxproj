@@ -130,6 +130,7 @@
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="shader.hpp" />
   </ItemGroup>
   <ItemGroup>
